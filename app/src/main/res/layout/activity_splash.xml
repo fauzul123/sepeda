@@ -4,7 +4,7 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/baground"
+    android:background="#fff"
     android:gravity="center"
     tools:context=".MainActivity">
 
@@ -12,7 +12,7 @@
         android:layout_width="180dp"
         android:layout_height="180dp"
         android:id="@+id/logo"
-        android:src="@drawable/sepeda"
+        android:src="@drawable/ic_baseline_directions_bike_24"
         android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"

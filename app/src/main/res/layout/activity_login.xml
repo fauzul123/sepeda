@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:background="@drawable/baground"
+    android:background="#fff"
     tools:context=".MainActivity">
 
     <ImageView
@@ -15,7 +15,7 @@
         android:layout_height="142dp"
         android:layout_gravity="center"
         android:layout_marginTop="80dp"
-        android:background="@drawable/sepeda"/>
+        android:background="@drawable/ic_baseline_directions_bike_24"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
