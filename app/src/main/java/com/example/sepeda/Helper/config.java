@@ -32,7 +32,6 @@ public class config {
     //public static final String BASE_URL = "http://192.168.43.107/gma5/";
     public static final String BASE_URL = "http://192.168.43.65/rentalsepeda-apii/";
     public static final String TOAST_AN_ERROR = "ERROR GA ADA USER :)";
-
     private static final String API = "api/";
     public static final String BASE_URL_API = BASE_URL + API;
 

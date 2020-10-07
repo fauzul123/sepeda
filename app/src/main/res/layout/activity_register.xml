@@ -14,7 +14,7 @@
             android:layout_height="142dp"
             android:layout_gravity="center"
             android:layout_marginTop="0dp"
-            android:background="@drawable/sepeda" />
+            android:background="@drawable/ic_baseline_directions_bike_24" />
 
         <TextView
             android:layout_width="match_parent"
