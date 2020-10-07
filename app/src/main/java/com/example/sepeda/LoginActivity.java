@@ -66,7 +66,8 @@ public class LoginActivity extends AppCompatActivity {
                     body.put("email", email);
                     body.put("password", password);
                     AndroidNetworking.post(config.BASE_URL+"login.php")
-                            .addBodyParameter(body)
+                            .addBodyParameter("email" , email)
+                            .addBodyParameter("password" , password)
                             .setOkHttpClient(((initial) getApplication()).getOkHttpClient())
                             .setPriority(Priority.MEDIUM)
                             .build()
@@ -107,7 +108,8 @@ public class LoginActivity extends AppCompatActivity {
                                             Toast.makeText(LoginActivity.this, message, Toast.LENGTH_SHORT).show();
                                             finish();
                                             finishAffinity();
-                                        }else {
+                                        }
+                                        else if (roleuser.equalsIgnoreCase("customer")){
                                             Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
                                             startActivity(intent);
                                             Toast.makeText(LoginActivity.this, message, Toast.LENGTH_SHORT).show();
