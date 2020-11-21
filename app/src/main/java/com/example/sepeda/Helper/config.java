@@ -28,8 +28,6 @@ import com.example.sepeda.LoginActivity;
 import java.util.Random;
 
 public class config {
-    //public static final String BASE_URL = " http://98102f27.ngrok.io/gma5/";
-    //public static final String BASE_URL = "http://192.168.43.107/gma5/";
     public static final String BASE_URL = "http://192.168.43.65/rentalsepeda-apii/";
     public static final String TOAST_AN_ERROR = "ERROR GA ADA USER :)";
     private static final String API = "api/";
@@ -37,7 +35,6 @@ public class config {
 
     public static final String UPLOAD_FOLDER = "uploads/";
     public static final String BASE_URL_UPLOADS = BASE_URL + UPLOAD_FOLDER;
-    public static final String FIREBASE_URL = "https://dazzling-torch-6878.firebaseio.com/ABS/";
 
     public static final String TOAST_AN_EROR = "Mohon maaf, terjadi kendala jaringan / server";
 
@@ -82,46 +79,6 @@ public class config {
     public static final int REQ_IMB = 19000;
     public static final int REQ_DOKUMEN_LAIN = 20000;
 
-    public static final String SHARED_PREF_NAME_FORM_BOOKING = "Form Booking";
-    public static final String BOOK_NAMA_LENGKAP_PEMOHON = "BOOK_NAMA_PEMOHON";
-    public static final String BOOK_NO_KTP_PEMOHON = "BOOK_NO_KTP_PEMOHON";
-    public static final String BOOK_NAMA_GADIS_IBU_PEMOHON = "BOOK_NAMA_GADIS_IBU_PEMOHON";
-    public static final String BOOK_ALAMAT_RUMAH_PEMOHON = "BOOK_ALAMAT_RUMAH_PEMOHON";
-    public static final String BOOK_RT_RUMAH_PEMOHON = "BOOK_RT_RUMAH_PEMOHON";
-    public static final String BOOK_RW_RUMAH_PEMOHON = "BOOK_RW_RUMAH_PEMOHON";
-    public static final String BOOK_KELURAHAN_RUMAH_PEMOHON = "BOOK_KELURAHAN_RUMAH_PEMOHON";
-    public static final String BOOK_KECAMATAN_RUMAH_PEMOHON = "BOOK_KECAMATAN_RUMAH_PEMOHON";
-    public static final String BOOK_KOTA_RUMAH_PEMOHON = "BOOK_KOTA_RUMAH_PEMOHON";
-    public static final String BOOK_KODEPOS_RUMAH_PEMOHON = "BOOK_KODEPOS_RUMAH_PEMOHON";
-    public static final String BOOK_NO_TELEPON_PEMOHON = "BOOK_NO_TELEPON_PEMOHON";
-    public static final String BOOK_NO_HANDPHONE1_PEMOHON = "BOOK_NO_HANDPHONE1_PEMOHON";
-    public static final String BOOK_NO_HANDPHONE2_PEMOHON = "BOOK_NO_HANDPHONE2_PEMOHON";
-    public static final String BOOK_JAM_FREE_PEMOHON = "BOOK_JAM_FREE_PEMOHON";
-    public static final String BOOK_EMAIL_PEMOHON = "BOOK_EMAIL_PEMOHON";
-    public static final String BOOK_TEMPAT_LAHIR_PEMOHON = "BOOK_TEMPAT_LAHIR_PEMOHON";
-    public static final String BOOK_TANGGAL_LAHIR_PEMOHON = "BOOK_TANGGAL_LAHIR_PEMOHON";
-    public static final String BOOK_PENDIDIKAN_TERAKHIR_PEMOHON = "BOOK_PENDIDIKAN_TERAKHIR_PEMOHON";
-    public static final String BOOK_JENIS_PEKERJAAN_PEMOHON = "BOOK_JENIS_PEKERJAAN_PEMOHON";
-    public static final String BOOK_NAMA_USAHA_PEMOHON = "BOOK_NAMA_USAHA_PEMOHON";
-    public static final String BOOK_BENTUK_BADAN_USAHA_PEMOHON = "BOOK_BENTUK_BADAN_USAHA_PEMOHON";
-    public static final String BOOK_BIDANG_USAHA_PEMOHON = "BOOK_BIDANG_USAHA_PEMOHON";
-    public static final String BOOK_ALAMAT_USAHA_PEMOHON = "BOOK_ALAMAT_USAHA_PEMOHON";
-    public static final String BOOK_KOTA_USAHA_PEMOHON = "BOOK_KOTA_USAHA_PEMOHON";
-    public static final String BOOK_KODEPOS_USAHA_PEMOHON = "BOOK_KODEPOS_USAHA_PEMOHON";
-    public static final String BOOK_NO_TELEPON_USAHA_PEMOHON = "BOOK_NO_TELEPON_USAHA_PEMOHON";
-    public static final String BOOK_NO_TELEPON_EXT_USAHA_PEMOHON = "BOOK_NO_TELEPON_EXT_USAHA_PEMOHON";
-    public static final String BOOK_NO_FAX_USAHA_PEMOHON = "BOOK_NO_FAX_USAHA_PEMOHON";
-    public static final String BOOK_TAHUN_LAMA_BEKERJA_PEMOHON = "BOOK_TAHUN_LAMA_BEKERJA_PEMOHON";
-    public static final String BOOK_BULAN_LAMA_BEKERJA_PEMOHON = "BOOK_BULAN_LAMA_BEKERJA_PEMOHON";
-    public static final String BOOK_STATUS_PEKERJAAN_PEMOHON = "BOOK_STATUS_PEKERJAAN_PEMOHON";
-    public static final String BOOK_PENDAPATAN_BULANAN_PEMOHON = "BOOK_PENDAPATAN_BULANAN_PEMOHON";
-
-    public static final String FCM_TOKEN_REGISTRATION_COMPLETE = "FCM_TOKEN_REGISTRATION_COMPLETE";
-    public static final String PUSH_NOTIFICATION = "PUSH_NOTIFICATION";
-
-    // id to handle the notification in the notification tray
-    public static final int NOTIFICATION_ID = 100;
-    public static final int NOTIFICATION_ID_BIG_IMAGE = 101;
 
     public static final String SHARED_PREF_TAG_TOKEN = "SHARED_PREF_TAG_TOKEN";
 
@@ -134,38 +91,6 @@ public class config {
     public static final String ERROR_NETWORK = "Periksa kembali jaringan Anda";
 
     public static final int KEYWORD_SEARCH_MIN_LENGTH = 4;
-
-    //nav item
-    public static final String MENU_ADMIN_RINGKASAN = "RINGKASAN";
-
-    public static final String MENU_ADMIN_SITEPLAN = "SITEPLAN";
-
-    public static final String MENU_ADMIN_UNIT_SPESIFIKASI_DETAIL = "SPESIFIKASI_DETAIL";
-    public static final String MENU_ADMIN_UNIT_SPESIFIKASI = "SPESIFIKASI";
-
-    public static final String MENU_ADMIN_UNIT_IMAGE_LIST = "IMAGE_DETAIL";
-    public static final String MENU_ADMIN_UNIT_IMAGE = "IMAGE";
-    public static final String MENU_ADMIN_UNIT_IMAGE_NEW = "IMAGE_NEW";
-
-    public static final String MENU_ADMIN_UNIT = "UNIT";
-    public static final String MENU_ADMIN_UNIT_DETAIL = "UNIT_DETAIL";
-
-    public static final String MENU_ADMIN_KONSUMEN = "KONSUMEN";
-    public static final String MENU_ADMIN_KONSUMEN_DETAIL = "KONSUMEN_DETAIL";
-
-    public static final String MENU_ADMIN_BOOKING = "BOOKING";
-    public static final String MENU_ADMIN_BOOKING_DETAIL = "BOOKING_DETAIL";
-    public static final String MENU_ADMIN_BOOKING_PEMBAYARAN = "BOOKING_PEMBAYARAN";
-    public static final String MENU_ADMIN_BOOKING_PEMBAYARAN_DETAIL = "BOOKING_PEMBAYARAN_DETAIL";
-
-    public static final String MENU_ADMIN_PESAN = "PESAN";
-    public static final String MENU_ADMIN_PESAN_DETAIL = "PESAN_DETAIL";
-
-    public static final String MENU_ADMIN_DEFAULT = "DEFAULT";
-
-    public static final String MENU_ADMIN_KPR = "KPR";
-    public static final String MENU_ADMIN_KPR_PROSES = "KPR_DETAIL";
-    public static final String MENU_ADMIN_KPR_FORM = "KPR_FORM";
 
     //Camera request code
     //utk full size image capture
@@ -468,152 +393,4 @@ public class config {
         return BitmapFactory.decodeFile(path, options);
     }
 
-    public static String getMetadata(Context context, String name) {
-        try {
-            ApplicationInfo appInfo = context.getPackageManager().getApplicationInfo(context.getPackageName(), PackageManager.GET_META_DATA);
-            if (appInfo.metaData != null) {
-                return appInfo.metaData.getString(name);
-            }
-        }
-        catch (PackageManager.NameNotFoundException e) {
-            return null;
-        }
-
-        return null;
-    }
-
-    public static boolean isGPSAvailable(Context ctx){
-        LocationManager lm = (LocationManager) ctx.getSystemService(Context.LOCATION_SERVICE);
-        return lm != null && (lm.isProviderEnabled(LocationManager.GPS_PROVIDER) || lm.isProviderEnabled(LocationManager.NETWORK_PROVIDER));
-    }
-
-    public static boolean checkEmailFormat(String email) {
-        if (!email.matches("[a-zA-Z0-9._-]+@[a-z]+.[a-z]+")) {
-            return false;
-        }
-        else {
-            return true;
-        }
-    }
-
-    public static String randomString(int len) {
-        final String DATA = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-        Random RANDOM = new Random();
-
-        StringBuilder sb = new StringBuilder(len);
-
-        for (int i = 0; i < len; i++) {
-            sb.append(DATA.charAt(RANDOM.nextInt(DATA.length())));
-        }
-
-        return sb.toString();
-    }
-
-    public static String formatYMD(int year, int month, int date) {
-        String formattedDate = "";
-
-        formattedDate += Integer.toString(year);
-        formattedDate += "-";
-
-        if(month < 10) {
-            formattedDate += "0" + Integer.toString(month);
-        }
-        else {
-            formattedDate += Integer.toString(month);
-        }
-        formattedDate += "-";
-
-        if(date < 10)   {
-            formattedDate += "0" + Integer.toString(date);
-        }
-        else {
-            formattedDate += Integer.toString(date);
-        }
-
-        return formattedDate;
-    }
-
-    public static String formatDMY(int year, int month, int date) {
-        String formattedDate = "";
-
-        if(date < 10)   {
-            formattedDate += "0" + Integer.toString(date);
-        }
-        else {
-            formattedDate += Integer.toString(date);
-        }
-        formattedDate += "-";
-
-        if(month < 10) {
-            formattedDate += "0" + Integer.toString(month);
-        }
-        else {
-            formattedDate += Integer.toString(month);
-        }
-        formattedDate += "-";
-
-        formattedDate += Integer.toString(year);
-
-        return formattedDate;
-    }
-
-    public static String formatCustomTime(int hour, int minute) {
-        String formattedTime = "";
-
-        if(hour < 10) {
-            formattedTime = "0" + Integer.toString(hour);
-        }
-        else {
-            formattedTime = Integer.toString(hour);
-        }
-
-        formattedTime += ":";
-
-        if(minute < 10) {
-            formattedTime += "0" + Integer.toString(minute);
-        }
-        else {
-            formattedTime += Integer.toString(minute);
-        }
-
-        return formattedTime;
-    }
-
-    public static String formatCustomDate(int year, int month, int date) {
-        String formattedDate = "";
-
-        if(date < 10)   {
-            formattedDate = "0" + Integer.toString(date);
-        }
-        else {
-            formattedDate = Integer.toString(date);
-        }
-
-        if(month == 1)  formattedDate += " Januari ";
-        if(month == 2)  formattedDate += " Februari ";
-        if(month == 3)  formattedDate += " Maret ";
-        if(month == 4)  formattedDate += " April ";
-        if(month == 5)  formattedDate += " Mei ";
-        if(month == 6)  formattedDate += " Juni ";
-        if(month == 7)  formattedDate += " Juli ";
-        if(month == 8)  formattedDate += " Agustus ";
-        if(month == 9)  formattedDate += " September ";
-        if(month == 10)  formattedDate += " Oktober ";
-        if(month == 11)  formattedDate += " November ";
-        if(month == 12)  formattedDate += " Desember ";
-
-        return (formattedDate + "" + year);
-    }
-
-
-
-//    public static int getIndex(ArrayList<ItemOption> list, Spinner spinner, String searchId){
-//        for (int i=0;i<spinner.getCount();i++){
-//            if (list.get(i).getOptId().equalsIgnoreCase(searchId)){
-//                return i;
-//            }
-//        }
-//
-//        return 0;
-//    }
 }

@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import com.example.sepeda.Admin.AdminSepedaActivity;
 import com.example.sepeda.Admin.DetailAdminActivity;
 import com.example.sepeda.Admin.list_data_customerActivity;
 
@@ -26,6 +27,14 @@ public class AdminActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(AdminActivity.this, list_data_customerActivity.class);
+                startActivity(i);
+            }
+        });
+        daftarsepeda = findViewById(R.id.daftarsepeda);
+        daftarsepeda.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(AdminActivity.this, AdminSepedaActivity.class);
                 startActivity(i);
             }
         });
