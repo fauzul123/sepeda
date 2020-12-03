@@ -46,7 +46,7 @@ public class AppHelper {
 
     public static SepedaModel mapSepedaAdminModel(JSONObject rowData) {
         SepedaModel item = new SepedaModel();
-//        item.setID(rowData.optInt("ID"));
+        item.setID(rowData.optInt("ID"));
         item.setKODE(rowData.optString("KODE"));
         item.setMERK(rowData.optString("MERK"));
         item.setWARNA(rowData.optString("WARNA"));
