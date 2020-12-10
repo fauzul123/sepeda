@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.sepeda.Admin.DetailSepedaActivity;
 import com.example.sepeda.Admin.DetailUserActivity;
 import com.example.sepeda.Model.SepedaModel;
 import com.example.sepeda.Model.UserAdminModel;
@@ -46,7 +47,7 @@ public class AppHelper {
 
     public static SepedaModel mapSepedaAdminModel(JSONObject rowData) {
         SepedaModel item = new SepedaModel();
-        item.setID(rowData.optInt("ID"));
+        item.setID(rowData.optString("ID"));
         item.setKODE(rowData.optString("KODE"));
         item.setMERK(rowData.optString("MERK"));
         item.setWARNA(rowData.optString("WARNA"));
@@ -64,11 +65,10 @@ public class AppHelper {
         bundle.putString("MERK", rowData.getMERK().toUpperCase());
         bundle.putString("WARNA", rowData.getWARNA().toUpperCase());
         bundle.putString("HARGA", rowData.getHARGA());
-        bundle.putString("IMAGE", rowData.getIMAGE());
 
-//        Intent i = new Intent(context, DetailUserActivity.class);
-//        i.putExtra("extra_sepeda", rowData);
-//        context.startActivity(i);
+        Intent i = new Intent(context, DetailSepedaActivity.class);
+        i.putExtra("extra_sepeda", rowData);
+        context.startActivity(i);
     }
 
 }

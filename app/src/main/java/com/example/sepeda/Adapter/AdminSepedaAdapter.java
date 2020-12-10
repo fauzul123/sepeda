@@ -23,6 +23,7 @@ import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
 import com.example.sepeda.Admin.AdminSepedaActivity;
+import com.example.sepeda.Admin.DetailSepedaActivity;
 import com.example.sepeda.Admin.DetailUserActivity;
 import com.example.sepeda.Admin.list_data_customerActivity;
 import com.example.sepeda.Helper.AppHelper;
@@ -96,8 +97,8 @@ public class AdminSepedaAdapter extends RecyclerView.Adapter<AdminSepedaAdapter.
             tvKode.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-//                    Intent i = new Intent(context, DetailUserActivity.class);
-//                    AppHelper.goToUserAdminDetail(context,Amodel);
+                    Intent i = new Intent(context, DetailSepedaActivity.class);
+                    AppHelper.goToSepedaAdminDetail(context,Amodel);
                 }
             });
         }

@@ -3,7 +3,6 @@ package com.example.sepeda.Admin;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -17,31 +16,39 @@ import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
 import com.example.sepeda.Helper.config;
+import com.example.sepeda.Model.SepedaModel;
 import com.example.sepeda.R;
 import com.example.sepeda.initial;
-import com.vansuita.pickimage.bean.PickResult;
-import com.vansuita.pickimage.listeners.IPickResult;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.HashMap;
 
-public class AdminSepedaCreateActivity extends AppCompatActivity {
-
+public class DetailSepedaActivity extends AppCompatActivity {
     ImageView ivBack;
     private EditText etKode, etMerk, etWarna, etHarga;
     private Button btntambahsepeda;
     private boolean mIsFormFilled = false;
-    private SharedPreferences preferences;
+
+    private SepedaModel model;
+    private String U_ID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin_sepeda_create);
+        setContentView(R.layout.activity_detail_sepeda);
         binding();
-    }
+        model = getIntent().getExtras().getParcelable("extra_sepeda");
+        if(/*bundle*/ model != null) {
+            U_ID = model.getID();
 
+            etMerk.setText(model.getMERK());
+            etWarna.setText(model.getWARNA());
+            etKode.setText(model.getKODE());
+            etHarga.setText(model.getHARGA());
+        }
+    }
     private void binding() {
         etKode= findViewById(R.id.etKodesepeda);
         etMerk= findViewById(R.id.etMerk);
@@ -57,7 +64,7 @@ public class AdminSepedaCreateActivity extends AppCompatActivity {
                 finish();
             }
         });
-        btntambahsepeda = findViewById(R.id.btntambahsepeda);
+        btntambahsepeda = findViewById(R.id.btnupdatesepeda);
         btntambahsepeda.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -70,19 +77,20 @@ public class AdminSepedaCreateActivity extends AppCompatActivity {
 
 
                 if (kode.isEmpty() || warna.isEmpty() || merk.isEmpty() || harga.isEmpty()){
-                    Toast.makeText(AdminSepedaCreateActivity.this, "Harap lengkapi kolom Tambah Sepeda !", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DetailSepedaActivity.this, "Harap lengkapi kolom Tambah Sepeda !", Toast.LENGTH_SHORT).show();
                     mIsFormFilled = false;
                 }
 
 
                 if (mIsFormFilled) {
                     HashMap<String, String> body = new HashMap<>();
+                    body.put("id", U_ID);
                     body.put("kode", kode);
                     body.put("warna", warna);
                     body.put("merk", merk);
                     body.put("harga", harga);
 
-                    AndroidNetworking.post(config.BASE_URL+"tambahsepeda.php")
+                    AndroidNetworking.post(config.BASE_URL+"updatedata.php")
 
                             .addBodyParameter(body)
                             .setPriority(Priority.MEDIUM)
@@ -96,11 +104,11 @@ public class AdminSepedaCreateActivity extends AppCompatActivity {
 //                                            String status = response.getString(config.RESPONSE_STATUS_FIELD);
                                         String message = response.getString(config.RESPONSE_MESSAGE_FIELD);
 
-                                        Toast.makeText(AdminSepedaCreateActivity.this, message, Toast.LENGTH_LONG).show();
+                                        Toast.makeText(DetailSepedaActivity.this, message, Toast.LENGTH_LONG).show();
                                         Log.d("f", "response: "+message);
                                         if (message.equalsIgnoreCase(config.RESPONSE_STATUS_VALUE_SUCCESS)) {
 
-                                            Intent intent = new Intent(AdminSepedaCreateActivity.this, AdminSepedaActivity.class);
+                                            Intent intent = new Intent(DetailSepedaActivity.this, AdminSepedaActivity.class);
                                             startActivity(intent);
                                             finishAffinity();
                                         }
@@ -114,7 +122,7 @@ public class AdminSepedaCreateActivity extends AppCompatActivity {
                                 @Override
                                 public void onError(ANError anError) {
 //                                        mProgress.dismiss();
-                                    Toast.makeText(AdminSepedaCreateActivity.this, config.TOAST_AN_EROR, Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(DetailSepedaActivity.this, config.TOAST_AN_EROR, Toast.LENGTH_SHORT).show();
                                     Log.d("ab", "onError: " + anError.getErrorBody());
                                     Log.d("ab", "onError: " + anError.getLocalizedMessage());
                                     Log.d("ab", "onError: " + anError.getErrorDetail());

@@ -14,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Admin.AdminSepedaCreateActivity"></activity>
+        <activity android:name=".Admin.DetailSepedaActivity"></activity>
+        <activity android:name=".Admin.AdminSepedaCreateActivity" />
         <activity android:name=".Admin.AdminSepedaActivity" />
         <activity android:name=".UserProfileActivity" />
         <activity android:name=".Admin.DetailAdminActivity" />

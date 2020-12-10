@@ -4,7 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class SepedaModel implements Parcelable {
-    private int ID;
+    private String ID;
     private String KODE;
     private String MERK;
     private String HARGA;
@@ -12,7 +12,7 @@ public class SepedaModel implements Parcelable {
     private String IMAGE;
 
     public SepedaModel(Parcel in) {
-        ID = in.readInt();
+        ID = in.readString();
         KODE = in.readString();
         MERK = in.readString();
         HARGA = in.readString();
@@ -41,11 +41,11 @@ public class SepedaModel implements Parcelable {
         return 0;
     }
 
-    public int getID() {
+    public String getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(String ID) {
         this.ID = ID;
     }
 
@@ -95,7 +95,7 @@ public class SepedaModel implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeInt(ID);
+        dest.writeString(ID);
         dest.writeString(KODE);
         dest.writeString(MERK);
         dest.writeString(HARGA);
